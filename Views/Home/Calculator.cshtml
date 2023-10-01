@@ -1,0 +1,17 @@
+﻿@model Pierwszy.Models.Calculator;
+@{
+    ViewData["Title"] = "Prosty kalkulator";
+}
+
+<form action="Calculator">
+    <input type="number" asp-for="FirstNumber" placeholder="Podaj pierwszą liczbę..." />
+    <input type="number" asp-for="SecondNumber" placeholder="Podaj drugą liczbę..." />
+    <select asp-for="Operation">
+        <option value="1">Dodawanie</option>
+        <option value="2">Odejmowanie</option>
+        <option value="3">Mnożenie</option>
+        <option value="4">Dzielenie</option>
+    </select>
+    <input type="submit" value="Oblicz" />
+</form>
+<p>@ViewBag.result</p>
